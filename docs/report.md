@@ -1,6 +1,6 @@
-Gensim 词语表示学习与 fastText 文本分类实验报告
+GitHub 项目：[gensim-fasttext-assignment](https://github.com/abyssiphix/gensim-fasttext-assignment)
 
-实验日期 2026 年 10 月 7 日
+# Gensim 词语表示学习与 fastText 文本分类实验报告
 
 ## 1 实验目标与主要结果
 
@@ -18,16 +18,12 @@ Gensim 词语表示学习与 fastText 文本分类实验报告
 
 | 语料 | 本次规模 | 用途 |
 | --- | --- | --- |
-| THUCNews 十类正文副本 | 10000 篇原始新闻
-9815 篇进入训练 | 外部无标注词向量学习 |
-| PeopleDaily1998 | 18647 篇恢复文章
-选取 8 类共 480 篇 | 固定训练集和留出测试集 |
+| THUCNews 十类正文副本 | 10000 篇原始新闻，9815 篇进入训练 | 外部无标注词向量学习 |
+| PeopleDaily1998 | 18647 篇恢复文章，选取 8 类共 480 篇 | 固定训练集和留出测试集 |
 
 THUCNews 使用公开仓库中 cnews.test.txt 的全部 10000 行，每类 1000 行，原文件的主题标签不进入表示学习。它与截图的 836075 条镜像固定位置抽样不同。下载文件的大小及 SHA-256 与 Git LFS 指针一致，但不能据此认定不同镜像的内容完全相同。具体版本和校验值保存在 data/sources.json。[4]
 
 PeopleDaily1998 压缩包实际包含 1998 年 1-6 月。源语料提供文章和句子编号、分词及词性，没有本实验的八个主题标签；本次依据标题规则制作弱标签并检查排除明显误命中的候选。[5]
-
-
 
 ## 2 词向量训练与近邻分析
 
@@ -66,8 +62,6 @@ FastText 将“抢银行”列为“银行”的首个近邻，说明共享字�
 
 余弦相似度按向量点积除以两向量范数计算。组内和组间值都升高，可能同时包含语义接近及整体相似度偏高的影响，因此还观察二者差值。这里的 16 个词是小规模诊断集合，不能替代带人工评分的相似度基准。
 
-
-
 ## 3 词表外词与分类实验设置
 
 ### 词表外词查询
@@ -98,21 +92,13 @@ FastText 将“抢银行”列为“银行”的首个近邻，说明共享字�
 
 ### 监督训练参数
 
-分类输入仅使用标题之后各行的正文，最多前 500 个词项。输入格式为每行一个 __label__topic 加空格分词正文。分类器设置 100 维、学习率 0.3、25 轮、wordNgrams=2、softmax、单线程、种子 42、minCount=1，字符片段参数 minn=maxn=0。两种初始化共用 200000 个哈希桶；这一显式设置与截图未列出的默认桶数可能不同。
+分类输入仅使用标题之后各行的正文，最多前 500 个词项。输入格式为每行一个 `__label__topic` 加空格分词正文。分类器设置 100 维、学习率 0.3、25 轮、wordNgrams=2、softmax、单线程、种子 42、minCount=1，字符片段参数 minn=maxn=0。两种初始化共用 200000 个哈希桶；这一显式设置与截图未列出的默认桶数可能不同。
 
 预训练组通过 pretrainedVectors 导入 Gensim FastText 的合成词向量 .vec，导出文件不含子词哈希矩阵；从零组只去掉该参数。导入词向量后分类器继续进行监督训练。预训练词表覆盖本次输入词项的 78.5%。
 
-
-
 ## 4 分类结果与观察
 
-| 类数 | 预训练
-答对 | 预训练
-准确率 | 预训练
-宏 F1 | 从零
-答对 | 从零
-准确率 | 从零
-宏 F1 |
+| 类数 | 预训练答对 | 预训练准确率 | 预训练宏 F1 | 从零答对 | 从零准确率 | 从零宏 F1 |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2 | 24/24 | 1.000 | 1.000 | 18/24 | 0.750 | 0.743 |
 | 4 | 45/48 | 0.938 | 0.939 | 27/48 | 0.562 | 0.538 |
@@ -130,8 +116,6 @@ FastText 将“抢银行”列为“银行”的首个近邻，说明共享字�
 
 8 类预训练模型使用相同数据和参数重训一次，96/96 篇测试文章的预测一致。这支持本环境中本次运行的可复现性，不能替代多个随机种子与多个数据划分的稳定性评估。
 
-
-
 ## 5 八类混淆与错误案例
 
 图 2 八类预训练模型混淆矩阵 纵轴为标题规则标签
@@ -147,8 +131,6 @@ FastText 将“抢银行”列为“银行”的首个近邻，说明共享字�
 案例 3 19980407-01-003：科技 → 农业。标题以电脑技术命中科技规则，正文介绍传感器调节温湿度，以及蔬菜种植和亩产。模型预测农业，表明按技术手段与按应用领域标注会得到不同答案，也暴露了单标签规则的边界。
 
 完整正文、分数和逐篇预测随包提供。分类器分数未经校准；上述解释来自文本内容，是可能的误差来源。本次保留冻结后的全部预测，不依据测试错误修改标签或参数。
-
-
 
 ## 6 局限 扩展与复现
 
@@ -172,20 +154,14 @@ THUCNews 与 1998 年人民日报的时代、来源和分词方式不同。FastT
 
 ### 参考资料
 
-[1] Gensim Word2Vec 文档
-https://radimrehurek.com/gensim/models/word2vec.html
+[1] [Gensim Word2Vec 文档](https://radimrehurek.com/gensim/models/word2vec.html)
 
-[2] Bojanowski 等 Enriching Word Vectors with Subword Information
-https://arxiv.org/abs/1607.04606
+[2] [Bojanowski 等 Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606)
 
-[3] 官方 fastText Python 接口及监督训练参数
-https://fasttext.cc/docs/en/python-module.html
+[3] [官方 fastText Python 接口及监督训练参数](https://fasttext.cc/docs/en/python-module.html)
 
-[4] THUCNews 正文副本及固定版本
-https://github.com/qingyujean/document-level-classification/tree/5f63589fc17ab3ac360e74fc96f67d3f42e04780
+[4] [THUCNews 正文副本及固定版本](https://github.com/qingyujean/document-level-classification/tree/5f63589fc17ab3ac360e74fc96f67d3f42e04780)
 
-[5] PeopleDaily1998 数据仓库
-https://github.com/chenhui-bupt/PeopleDaily1998
+[5] [PeopleDaily1998 数据仓库](https://github.com/chenhui-bupt/PeopleDaily1998)
 
-[6] Joulin 等 Bag of Tricks for Efficient Text Classification
-https://arxiv.org/abs/1607.01759
+[6] [Joulin 等 Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)
