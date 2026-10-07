@@ -121,4 +121,4 @@ checksums.json                 数据与结果 SHA-256
 
 ## 提交说明
 
-可通过 GitHub 的 **Code → Download ZIP** 下载整个项目。若作为课程作业提交，请在 Word 报告首页填入姓名、学号和课程信息，并阅读方法、误判分析及结果局限。
+可通过 GitHub 的 **Code → Download ZIP** 下载整个项目。实验方法、误判分析与结果局限详见报告。
