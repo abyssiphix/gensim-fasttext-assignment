@@ -1,0 +1,8 @@
+*.py text eol=lf
+*.md text eol=lf
+*.gz binary
+*.png binary
+*.pdf binary
+*.docx binary
+data/** -text
+results/** -text

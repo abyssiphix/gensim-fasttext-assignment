@@ -1,0 +1,2037 @@
+{
+  "common_parameters": {
+    "vector_size": 100,
+    "window": 5,
+    "min_count": 3,
+    "sg": 1,
+    "negative": 5,
+    "hs": 0,
+    "sample": 0.001,
+    "workers": 1,
+    "seed": 42,
+    "epochs": 5,
+    "alpha": 0.025,
+    "min_alpha": 0.0001
+  },
+  "fasttext_extra": {
+    "min_n": 2,
+    "max_n": 4,
+    "bucket": 200000
+  },
+  "corpus_sha256": "deae342e0188e6c111a3cab49d4e871158e5fa156627ed9cfc1a9ff928b50271",
+  "models": {
+    "Word2Vec": {
+      "vocabulary_size": 65991,
+      "queries": {
+        "银行": [
+          [
+            "商业银行",
+            0.7762013673782349
+          ],
+          [
+            "金融机构",
+            0.7524092197418213
+          ],
+          [
+            "券商",
+            0.7501730918884277
+          ],
+          [
+            "招行",
+            0.7467247843742371
+          ],
+          [
+            "保险公司",
+            0.7418040633201599
+          ]
+        ],
+        "学校": [
+          [
+            "学生",
+            0.7876801490783691
+          ],
+          [
+            "院校",
+            0.782969057559967
+          ],
+          [
+            "中学",
+            0.7725630402565002
+          ],
+          [
+            "就读",
+            0.7614917159080505
+          ],
+          [
+            "美国大学",
+            0.7477627396583557
+          ]
+        ],
+        "电脑": [
+          [
+            "彩信",
+            0.7365314364433289
+          ],
+          [
+            "bw17",
+            0.7200388312339783
+          ],
+          [
+            "kong",
+            0.7130246758460999
+          ],
+          [
+            "电视",
+            0.7125840187072754
+          ],
+          [
+            "OTG",
+            0.710037350654602
+          ]
+        ],
+        "经济": [
+          [
+            "复苏",
+            0.749330997467041
+          ],
+          [
+            "宏观经济",
+            0.7432751059532166
+          ],
+          [
+            "关键时期",
+            0.7290846109390259
+          ],
+          [
+            "实体",
+            0.7280834317207336
+          ],
+          [
+            "经济运行",
+            0.717863917350769
+          ]
+        ]
+      },
+      "oov": {
+        "量子计算芯片": {
+          "in_vocab": false,
+          "can_infer": false,
+          "reason": "KeyError: 词表外词无可查询向量"
+        },
+        "超导量子云平台": {
+          "in_vocab": false,
+          "can_infer": false,
+          "reason": "KeyError: 词表外词无可查询向量"
+        },
+        "火星智能农场": {
+          "in_vocab": false,
+          "can_infer": false,
+          "reason": "KeyError: 词表外词无可查询向量"
+        }
+      },
+      "groups": {
+        "sports": [
+          "足球",
+          "篮球",
+          "比赛",
+          "球队"
+        ],
+        "finance": [
+          "银行",
+          "股票",
+          "贷款",
+          "利率"
+        ],
+        "education": [
+          "学校",
+          "学生",
+          "教师",
+          "教育"
+        ],
+        "technology": [
+          "电脑",
+          "软件",
+          "网络",
+          "科技"
+        ]
+      },
+      "missing_group_words": [],
+      "within_mean": 0.549782283604145,
+      "across_mean": 0.251974796759896,
+      "similarity_gap": 0.29780748684424907,
+      "within_pairs": 24,
+      "across_pairs": 96,
+      "pairs": [
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "足球",
+          "word_b": "篮球",
+          "cosine": 0.5886946320533752
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "足球",
+          "word_b": "比赛",
+          "cosine": 0.3212229907512665
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "足球",
+          "word_b": "球队",
+          "cosine": 0.35346511006355286
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "篮球",
+          "word_b": "比赛",
+          "cosine": 0.3496440351009369
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "篮球",
+          "word_b": "球队",
+          "cosine": 0.5481454133987427
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "比赛",
+          "word_b": "球队",
+          "cosine": 0.5777816772460938
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "银行",
+          "word_b": "股票",
+          "cosine": 0.5027232766151428
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "银行",
+          "word_b": "贷款",
+          "cosine": 0.6704152226448059
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "银行",
+          "word_b": "利率",
+          "cosine": 0.5666146874427795
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "股票",
+          "word_b": "贷款",
+          "cosine": 0.46531736850738525
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "股票",
+          "word_b": "利率",
+          "cosine": 0.4756869077682495
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "贷款",
+          "word_b": "利率",
+          "cosine": 0.7290486097335815
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学校",
+          "word_b": "学生",
+          "cosine": 0.7876800894737244
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学校",
+          "word_b": "教师",
+          "cosine": 0.7278547883033752
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学校",
+          "word_b": "教育",
+          "cosine": 0.5537786483764648
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学生",
+          "word_b": "教师",
+          "cosine": 0.6993240714073181
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学生",
+          "word_b": "教育",
+          "cosine": 0.6260693669319153
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "教师",
+          "word_b": "教育",
+          "cosine": 0.6077058911323547
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "电脑",
+          "word_b": "软件",
+          "cosine": 0.6227615475654602
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "电脑",
+          "word_b": "网络",
+          "cosine": 0.5729324817657471
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "电脑",
+          "word_b": "科技",
+          "cosine": 0.41904306411743164
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "软件",
+          "word_b": "网络",
+          "cosine": 0.5305399298667908
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "软件",
+          "word_b": "科技",
+          "cosine": 0.5070223212242126
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "网络",
+          "word_b": "科技",
+          "cosine": 0.3913026750087738
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "银行",
+          "cosine": 0.12345457077026367
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "股票",
+          "cosine": 0.13623347878456116
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "贷款",
+          "cosine": 0.07896393537521362
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "利率",
+          "cosine": 0.09506703168153763
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "银行",
+          "cosine": 0.23609299957752228
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "股票",
+          "cosine": 0.17580656707286835
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "贷款",
+          "cosine": 0.04712795838713646
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "利率",
+          "cosine": 0.1646178662776947
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "银行",
+          "cosine": 0.13676175475120544
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "股票",
+          "cosine": 0.25354814529418945
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "贷款",
+          "cosine": 0.13075868785381317
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "利率",
+          "cosine": 0.2101135551929474
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "银行",
+          "cosine": 0.3449121415615082
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "股票",
+          "cosine": 0.36402472853660583
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "贷款",
+          "cosine": 0.20058484375476837
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "利率",
+          "cosine": 0.30367979407310486
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "学校",
+          "cosine": 0.2568877339363098
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "学生",
+          "cosine": 0.32965904474258423
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "教师",
+          "cosine": 0.36235547065734863
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "教育",
+          "cosine": 0.3506637513637543
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "学校",
+          "cosine": 0.500284731388092
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "学生",
+          "cosine": 0.4091357886791229
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "教师",
+          "cosine": 0.5158041715621948
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "教育",
+          "cosine": 0.37550273537635803
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "学校",
+          "cosine": 0.2808455526828766
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "学生",
+          "cosine": 0.2866954207420349
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "教师",
+          "cosine": 0.2540183663368225
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "教育",
+          "cosine": 0.26149865984916687
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "学校",
+          "cosine": 0.3623349666595459
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "学生",
+          "cosine": 0.2901459038257599
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "教师",
+          "cosine": 0.37720438838005066
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "教育",
+          "cosine": 0.19333578646183014
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "电脑",
+          "cosine": 0.259918749332428
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "软件",
+          "cosine": 0.23741859197616577
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "网络",
+          "cosine": 0.31494563817977905
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "科技",
+          "cosine": 0.33671754598617554
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "电脑",
+          "cosine": 0.24705015122890472
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "软件",
+          "cosine": 0.21497169137001038
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "网络",
+          "cosine": 0.3201856017112732
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "科技",
+          "cosine": 0.2547977566719055
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "电脑",
+          "cosine": 0.2800084054470062
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "软件",
+          "cosine": 0.17718280851840973
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "网络",
+          "cosine": 0.14282992482185364
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "科技",
+          "cosine": 0.17181211709976196
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "电脑",
+          "cosine": 0.1924709975719452
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "软件",
+          "cosine": 0.20787036418914795
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "网络",
+          "cosine": 0.1472153663635254
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "科技",
+          "cosine": 0.14079974591732025
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "学校",
+          "cosine": 0.3197363317012787
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "学生",
+          "cosine": 0.23287513852119446
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "教师",
+          "cosine": 0.25833719968795776
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "教育",
+          "cosine": 0.25695785880088806
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "学校",
+          "cosine": 0.21814943850040436
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "学生",
+          "cosine": 0.27125054597854614
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "教师",
+          "cosine": 0.18129631876945496
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "教育",
+          "cosine": 0.22837261855602264
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "学校",
+          "cosine": 0.30741551518440247
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "学生",
+          "cosine": 0.3741667568683624
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "教师",
+          "cosine": 0.2985955476760864
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "教育",
+          "cosine": 0.3340616226196289
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "学校",
+          "cosine": 0.3634631037712097
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "学生",
+          "cosine": 0.3733150362968445
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "教师",
+          "cosine": 0.24727897346019745
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "教育",
+          "cosine": 0.311662495136261
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "电脑",
+          "cosine": 0.3250119090080261
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "软件",
+          "cosine": 0.33627575635910034
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "网络",
+          "cosine": 0.37548747658729553
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "科技",
+          "cosine": 0.3189452588558197
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "电脑",
+          "cosine": 0.2614718973636627
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "软件",
+          "cosine": 0.15467482805252075
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "网络",
+          "cosine": 0.20645388960838318
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "科技",
+          "cosine": 0.1814095675945282
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "电脑",
+          "cosine": 0.24071721732616425
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "软件",
+          "cosine": 0.2767162024974823
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "网络",
+          "cosine": 0.23039530217647552
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "科技",
+          "cosine": 0.1895516961812973
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "电脑",
+          "cosine": 0.12827982008457184
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "软件",
+          "cosine": 0.22260624170303345
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "网络",
+          "cosine": 0.11321815848350525
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "科技",
+          "cosine": 0.07600171864032745
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "电脑",
+          "cosine": 0.17313753068447113
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "软件",
+          "cosine": 0.20533184707164764
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "网络",
+          "cosine": 0.2042386680841446
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "科技",
+          "cosine": 0.2616328299045563
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "电脑",
+          "cosine": 0.1632661372423172
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "软件",
+          "cosine": 0.19155952334403992
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "网络",
+          "cosine": 0.18533356487751007
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "科技",
+          "cosine": 0.20261530578136444
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "电脑",
+          "cosine": 0.21743549406528473
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "软件",
+          "cosine": 0.2560921311378479
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "网络",
+          "cosine": 0.2568815350532532
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "科技",
+          "cosine": 0.30364879965782166
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "电脑",
+          "cosine": 0.230994313955307
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "软件",
+          "cosine": 0.3309628963470459
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "网络",
+          "cosine": 0.2515448033809662
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "科技",
+          "cosine": 0.48643767833709717
+        }
+      ],
+      "training_seconds": 141.47178870800417
+    },
+    "FastText": {
+      "vocabulary_size": 65991,
+      "queries": {
+        "银行": [
+          [
+            "抢银行",
+            0.9052207469940186
+          ],
+          [
+            "外资银行",
+            0.8974443674087524
+          ],
+          [
+            "渣打银行",
+            0.8963870406150818
+          ],
+          [
+            "非银行",
+            0.8897351026535034
+          ],
+          [
+            "银行家",
+            0.8869470953941345
+          ]
+        ],
+        "学校": [
+          [
+            "教会学校",
+            0.8833547234535217
+          ],
+          [
+            "小学校",
+            0.8756975531578064
+          ],
+          [
+            "私校",
+            0.85860276222229
+          ],
+          [
+            "私立学校",
+            0.8538029193878174
+          ],
+          [
+            "日语学校",
+            0.8530942797660828
+          ]
+        ],
+        "电脑": [
+          [
+            "电脑桌",
+            0.8730227947235107
+          ],
+          [
+            "电脑前",
+            0.8712682723999023
+          ],
+          [
+            "电脑软件",
+            0.8651430010795593
+          ],
+          [
+            "电脑游戏",
+            0.82521653175354
+          ],
+          [
+            "电脑部",
+            0.8219974040985107
+          ]
+        ],
+        "经济": [
+          [
+            "经济圈",
+            0.8789006471633911
+          ],
+          [
+            "会展经济",
+            0.878288745880127
+          ],
+          [
+            "非经济",
+            0.8695244193077087
+          ],
+          [
+            "经济过热",
+            0.8679197430610657
+          ],
+          [
+            "知识经济",
+            0.8651410341262817
+          ]
+        ]
+      },
+      "oov": {
+        "量子计算芯片": {
+          "in_vocab": false,
+          "can_infer": true,
+          "norm": 1.6965328454971313,
+          "neighbors": [
+            [
+              "科幻影片",
+              0.8788563013076782
+            ],
+            [
+              "双雄片",
+              0.8683253526687622
+            ],
+            [
+              "暖气片",
+              0.8666132092475891
+            ]
+          ]
+        },
+        "超导量子云平台": {
+          "in_vocab": false,
+          "can_infer": true,
+          "norm": 1.4960402250289917,
+          "neighbors": [
+            [
+              "跨平台",
+              0.8805989027023315
+            ],
+            [
+              "网络平台",
+              0.8730791211128235
+            ],
+            [
+              "交友平台",
+              0.8499613404273987
+            ]
+          ]
+        },
+        "火星智能农场": {
+          "in_vocab": false,
+          "can_infer": true,
+          "norm": 1.5570787191390991,
+          "neighbors": [
+            [
+              "昏昏欲睡",
+              0.8939225077629089
+            ],
+            [
+              "赤膊上阵",
+              0.8912841081619263
+            ],
+            [
+              "缠斗",
+              0.8873359560966492
+            ]
+          ]
+        }
+      },
+      "groups": {
+        "sports": [
+          "足球",
+          "篮球",
+          "比赛",
+          "球队"
+        ],
+        "finance": [
+          "银行",
+          "股票",
+          "贷款",
+          "利率"
+        ],
+        "education": [
+          "学校",
+          "学生",
+          "教师",
+          "教育"
+        ],
+        "technology": [
+          "电脑",
+          "软件",
+          "网络",
+          "科技"
+        ]
+      },
+      "missing_group_words": [],
+      "within_mean": 0.5963673889636993,
+      "across_mean": 0.2661313973367214,
+      "similarity_gap": 0.3302359916269779,
+      "within_pairs": 24,
+      "across_pairs": 96,
+      "pairs": [
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "足球",
+          "word_b": "篮球",
+          "cosine": 0.638107419013977
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "足球",
+          "word_b": "比赛",
+          "cosine": 0.45312538743019104
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "足球",
+          "word_b": "球队",
+          "cosine": 0.4321746230125427
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "篮球",
+          "word_b": "比赛",
+          "cosine": 0.44375938177108765
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "篮球",
+          "word_b": "球队",
+          "cosine": 0.6178257465362549
+        },
+        {
+          "group_a": "sports",
+          "group_b": "sports",
+          "word_a": "比赛",
+          "word_b": "球队",
+          "cosine": 0.612498939037323
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "银行",
+          "word_b": "股票",
+          "cosine": 0.5163220167160034
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "银行",
+          "word_b": "贷款",
+          "cosine": 0.6832563877105713
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "银行",
+          "word_b": "利率",
+          "cosine": 0.633368730545044
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "股票",
+          "word_b": "贷款",
+          "cosine": 0.471649706363678
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "股票",
+          "word_b": "利率",
+          "cosine": 0.4711965322494507
+        },
+        {
+          "group_a": "finance",
+          "group_b": "finance",
+          "word_a": "贷款",
+          "word_b": "利率",
+          "cosine": 0.7309202551841736
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学校",
+          "word_b": "学生",
+          "cosine": 0.821872889995575
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学校",
+          "word_b": "教师",
+          "cosine": 0.7368553876876831
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学校",
+          "word_b": "教育",
+          "cosine": 0.6546730399131775
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学生",
+          "word_b": "教师",
+          "cosine": 0.7379701733589172
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "学生",
+          "word_b": "教育",
+          "cosine": 0.6579419374465942
+        },
+        {
+          "group_a": "education",
+          "group_b": "education",
+          "word_a": "教师",
+          "word_b": "教育",
+          "cosine": 0.657745897769928
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "电脑",
+          "word_b": "软件",
+          "cosine": 0.6654691100120544
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "电脑",
+          "word_b": "网络",
+          "cosine": 0.6568504571914673
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "电脑",
+          "word_b": "科技",
+          "cosine": 0.4338088035583496
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "软件",
+          "word_b": "网络",
+          "cosine": 0.5916673541069031
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "软件",
+          "word_b": "科技",
+          "cosine": 0.5366554260253906
+        },
+        {
+          "group_a": "technology",
+          "group_b": "technology",
+          "word_a": "网络",
+          "word_b": "科技",
+          "cosine": 0.4571017324924469
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "银行",
+          "cosine": 0.14088009297847748
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "股票",
+          "cosine": 0.1874021291732788
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "贷款",
+          "cosine": 0.12694044411182404
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "足球",
+          "word_b": "利率",
+          "cosine": 0.13692881166934967
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "银行",
+          "cosine": 0.2233969271183014
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "股票",
+          "cosine": 0.2275775969028473
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "贷款",
+          "cosine": 0.09117861092090607
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "篮球",
+          "word_b": "利率",
+          "cosine": 0.22302402555942535
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "银行",
+          "cosine": 0.15757326781749725
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "股票",
+          "cosine": 0.2911667823791504
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "贷款",
+          "cosine": 0.15415289998054504
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "比赛",
+          "word_b": "利率",
+          "cosine": 0.2425542175769806
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "银行",
+          "cosine": 0.3632832169532776
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "股票",
+          "cosine": 0.41889941692352295
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "贷款",
+          "cosine": 0.24255694448947906
+        },
+        {
+          "group_a": "sports",
+          "group_b": "finance",
+          "word_a": "球队",
+          "word_b": "利率",
+          "cosine": 0.33458560705184937
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "学校",
+          "cosine": 0.23968258500099182
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "学生",
+          "cosine": 0.27373868227005005
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "教师",
+          "cosine": 0.3736984133720398
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "足球",
+          "word_b": "教育",
+          "cosine": 0.2995016276836395
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "学校",
+          "cosine": 0.4206037223339081
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "学生",
+          "cosine": 0.3405466079711914
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "教师",
+          "cosine": 0.4729304909706116
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "篮球",
+          "word_b": "教育",
+          "cosine": 0.3693670630455017
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "学校",
+          "cosine": 0.23186293244361877
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "学生",
+          "cosine": 0.24150888621807098
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "教师",
+          "cosine": 0.28425922989845276
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "比赛",
+          "word_b": "教育",
+          "cosine": 0.20489725470542908
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "学校",
+          "cosine": 0.36252787709236145
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "学生",
+          "cosine": 0.262183278799057
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "教师",
+          "cosine": 0.3816632926464081
+        },
+        {
+          "group_a": "sports",
+          "group_b": "education",
+          "word_a": "球队",
+          "word_b": "教育",
+          "cosine": 0.21750394999980927
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "电脑",
+          "cosine": 0.41909462213516235
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "软件",
+          "cosine": 0.3279821276664734
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "网络",
+          "cosine": 0.43441036343574524
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "足球",
+          "word_b": "科技",
+          "cosine": 0.38341987133026123
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "电脑",
+          "cosine": 0.2832091748714447
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "软件",
+          "cosine": 0.22417199611663818
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "网络",
+          "cosine": 0.35506194829940796
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "篮球",
+          "word_b": "科技",
+          "cosine": 0.33696696162223816
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "电脑",
+          "cosine": 0.24137063324451447
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "软件",
+          "cosine": 0.1302087903022766
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "网络",
+          "cosine": 0.2219880372285843
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "比赛",
+          "word_b": "科技",
+          "cosine": 0.20461392402648926
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "电脑",
+          "cosine": 0.14578777551651
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "软件",
+          "cosine": 0.14859618246555328
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "网络",
+          "cosine": 0.24210500717163086
+        },
+        {
+          "group_a": "sports",
+          "group_b": "technology",
+          "word_a": "球队",
+          "word_b": "科技",
+          "cosine": 0.19143134355545044
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "学校",
+          "cosine": 0.3147736191749573
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "学生",
+          "cosine": 0.3162323236465454
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "教师",
+          "cosine": 0.25174662470817566
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "银行",
+          "word_b": "教育",
+          "cosine": 0.32083839178085327
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "学校",
+          "cosine": 0.16358861327171326
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "学生",
+          "cosine": 0.1599033921957016
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "教师",
+          "cosine": 0.10733366012573242
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "股票",
+          "word_b": "教育",
+          "cosine": 0.12617677450180054
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "学校",
+          "cosine": 0.2647108733654022
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "学生",
+          "cosine": 0.3336735665798187
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "教师",
+          "cosine": 0.24098455905914307
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "贷款",
+          "word_b": "教育",
+          "cosine": 0.33511030673980713
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "学校",
+          "cosine": 0.3363126516342163
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "学生",
+          "cosine": 0.33897945284843445
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "教师",
+          "cosine": 0.23159892857074738
+        },
+        {
+          "group_a": "finance",
+          "group_b": "education",
+          "word_a": "利率",
+          "word_b": "教育",
+          "cosine": 0.31226369738578796
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "电脑",
+          "cosine": 0.2963435649871826
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "软件",
+          "cosine": 0.382149875164032
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "网络",
+          "cosine": 0.342708021402359
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "银行",
+          "word_b": "科技",
+          "cosine": 0.29381346702575684
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "电脑",
+          "cosine": 0.28638193011283875
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "软件",
+          "cosine": 0.2035287618637085
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "网络",
+          "cosine": 0.25242358446121216
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "股票",
+          "word_b": "科技",
+          "cosine": 0.2501789331436157
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "电脑",
+          "cosine": 0.32126113772392273
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "软件",
+          "cosine": 0.3684071898460388
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "网络",
+          "cosine": 0.351437509059906
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "贷款",
+          "word_b": "科技",
+          "cosine": 0.22092418372631073
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "电脑",
+          "cosine": 0.1317778378725052
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "软件",
+          "cosine": 0.23944823443889618
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "网络",
+          "cosine": 0.14827461540699005
+        },
+        {
+          "group_a": "finance",
+          "group_b": "technology",
+          "word_a": "利率",
+          "word_b": "科技",
+          "cosine": 0.11053408682346344
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "电脑",
+          "cosine": 0.16741415858268738
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "软件",
+          "cosine": 0.20133458077907562
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "网络",
+          "cosine": 0.233976349234581
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学校",
+          "word_b": "科技",
+          "cosine": 0.3205237090587616
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "电脑",
+          "cosine": 0.19263386726379395
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "软件",
+          "cosine": 0.1953333169221878
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "网络",
+          "cosine": 0.2183723896741867
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "学生",
+          "word_b": "科技",
+          "cosine": 0.24960879981517792
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "电脑",
+          "cosine": 0.21108846366405487
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "软件",
+          "cosine": 0.25029486417770386
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "网络",
+          "cosine": 0.27294060587882996
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教师",
+          "word_b": "科技",
+          "cosine": 0.3602835536003113
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "电脑",
+          "cosine": 0.22030146420001984
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "软件",
+          "cosine": 0.3684263825416565
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "网络",
+          "cosine": 0.34403470158576965
+        },
+        {
+          "group_a": "education",
+          "group_b": "technology",
+          "word_a": "教育",
+          "word_b": "科技",
+          "cosine": 0.5592309236526489
+        }
+      ],
+      "training_seconds": 175.3087525840092,
+      "vec_sha256": "25a1844906e6fc089a9e1356776167b7b3de790b927fe7f961ed56a93a0b595e"
+    }
+  }
+}

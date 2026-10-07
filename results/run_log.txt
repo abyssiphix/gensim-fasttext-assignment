@@ -1,0 +1,19 @@
+Word2Vec: 完成第 1 轮
+Word2Vec: 完成第 2 轮
+Word2Vec: 完成第 3 轮
+Word2Vec: 完成第 4 轮
+Word2Vec: 完成第 5 轮
+Word2Vec seconds 141.47 vocab 65991
+FastText: 完成第 1 轮
+FastText: 完成第 2 轮
+FastText: 完成第 3 轮
+FastText: 完成第 4 轮
+FastText: 完成第 5 轮
+FastText seconds 175.31 vocab 65991
+
+2class_pretrained {"topics": 2, "variant": "pretrained", "n_train": 96, "n_test": 24, "correct": 24, "accuracy": 1.0, "macro_f1": 1.0, "training_seconds": 1.876450375013519}
+2class_scratch {"topics": 2, "variant": "scratch", "n_train": 96, "n_test": 24, "correct": 18, "accuracy": 0.75, "macro_f1": 0.7428571428571429, "training_seconds": 0.15634808300819714}
+4class_pretrained {"topics": 4, "variant": "pretrained", "n_train": 192, "n_test": 48, "correct": 45, "accuracy": 0.9375, "macro_f1": 0.9386253842775582, "training_seconds": 2.199953415998607}
+4class_scratch {"topics": 4, "variant": "scratch", "n_train": 192, "n_test": 48, "correct": 27, "accuracy": 0.5625, "macro_f1": 0.5380081300813008, "training_seconds": 0.3715641669987235}
+8class_pretrained {"topics": 8, "variant": "pretrained", "n_train": 384, "n_test": 96, "correct": 81, "accuracy": 0.84375, "macro_f1": 0.8421967525228395, "training_seconds": 2.374887458005105}
+8class_scratch {"topics": 8, "variant": "scratch", "n_train": 384, "n_test": 96, "correct": 33, "accuracy": 0.34375, "macro_f1": 0.30101652533159384, "training_seconds": 0.6862985420011682}

@@ -1,0 +1,34 @@
+{
+  "thu": {
+    "source_repository": "https://github.com/qingyujean/document-level-classification",
+    "ref": "5f63589fc17ab3ac360e74fc96f67d3f42e04780",
+    "path": "data/thucnews/cnews.test.txt",
+    "url": "https://media.githubusercontent.com/media/qingyujean/document-level-classification/5f63589fc17ab3ac360e74fc96f67d3f42e04780/data/thucnews/cnews.test.txt",
+    "bytes": 27508648,
+    "sha256": "50eca8f454908c842da883d34e5953df6203685dffe1f3fbfad1d22687d2aad3",
+    "lfs_sha256_verified": true,
+    "raw_articles": 10000,
+    "sampling": "使用该副本全部 10000 行；副本为 THUCNews 的十类子集",
+    "deviation_from_screenshot": "未使用 ae77e363396e90b54cdaa9eafdbc5e102a3d4019 镜像中的 100 组固定位置抽样；本次副本与其不保证字节一致"
+  },
+  "people_daily": {
+    "source_repository": "https://github.com/chenhui-bupt/PeopleDaily1998",
+    "ref": "4020ecc558c554c6f3c9bd81a606d2197e28e628",
+    "path": "199801.zip",
+    "url": "https://raw.githubusercontent.com/chenhui-bupt/PeopleDaily1998/4020ecc558c554c6f3c9bd81a606d2197e28e628/199801.zip",
+    "bytes": 20305578,
+    "sha256": "17474bbf2b360921f2eae0089fd83e22601e5a0649943c3f59403650997b4ed2",
+    "actual_months": [
+      "199801",
+      "199802",
+      "199803",
+      "199804",
+      "199805",
+      "199806"
+    ],
+    "labels": "本次标题规则弱标签及排除检查；非数据集原生主题标签",
+    "split": "sha256(42:select:文章ID) 选每类60篇，sha256(42:split:文章ID) 前12测试，其余48训练"
+  },
+  "download_date": "2026-10-07",
+  "reference_results_used_as_actual": false
+}

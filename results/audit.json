@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "articles": 480,
+  "article_id_leakage": false,
+  "duplicate_bodies": false,
+  "nested_splits": true,
+  "input_verified_from_body_tokens": true,
+  "metric_recalculation": true,
+  "repeat_predictions": 96
+}

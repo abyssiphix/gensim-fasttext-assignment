@@ -1,0 +1,551 @@
+{
+  "parameters": {
+    "dim": 100,
+    "lr": 0.3,
+    "epoch": 25,
+    "wordNgrams": 2,
+    "loss": "softmax",
+    "thread": 1,
+    "seed": 42,
+    "minCount": 1,
+    "minn": 0,
+    "maxn": 0,
+    "bucket": 200000,
+    "verbose": 0
+  },
+  "pretrained_vec_sha256": "25a1844906e6fc089a9e1356776167b7b3de790b927fe7f961ed56a93a0b595e",
+  "title_in_input": false,
+  "pretrained_token_coverage": 0.784761101816601,
+  "experiments": {
+    "2class_pretrained": {
+      "n_test": 24,
+      "correct": 24,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": [
+        [
+          12,
+          0
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "class_metrics": {
+        "sports": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "finance": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 24.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 24.0
+        }
+      }
+    },
+    "2class_scratch": {
+      "n_test": 24,
+      "correct": 18,
+      "accuracy": 0.75,
+      "macro_f1": 0.7428571428571429,
+      "confusion_matrix": [
+        [
+          11,
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "class_metrics": {
+        "sports": {
+          "precision": 0.6875,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.7857142857142857,
+          "support": 12.0
+        },
+        "finance": {
+          "precision": 0.875,
+          "recall": 0.5833333333333334,
+          "f1-score": 0.7,
+          "support": 12.0
+        },
+        "accuracy": 0.75,
+        "macro avg": {
+          "precision": 0.78125,
+          "recall": 0.75,
+          "f1-score": 0.7428571428571429,
+          "support": 24.0
+        },
+        "weighted avg": {
+          "precision": 0.78125,
+          "recall": 0.75,
+          "f1-score": 0.7428571428571429,
+          "support": 24.0
+        }
+      }
+    },
+    "4class_pretrained": {
+      "n_test": 48,
+      "correct": 45,
+      "accuracy": 0.9375,
+      "macro_f1": 0.9386253842775582,
+      "confusion_matrix": [
+        [
+          12,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          10,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          12
+        ]
+      ],
+      "class_metrics": {
+        "sports": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "finance": {
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.9565217391304348,
+          "support": 12.0
+        },
+        "education": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 12.0
+        },
+        "culture": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1-score": 0.8888888888888888,
+          "support": 12.0
+        },
+        "accuracy": 0.9375,
+        "macro avg": {
+          "precision": 0.95,
+          "recall": 0.9375,
+          "f1-score": 0.9386253842775582,
+          "support": 48.0
+        },
+        "weighted avg": {
+          "precision": 0.9500000000000001,
+          "recall": 0.9375,
+          "f1-score": 0.9386253842775582,
+          "support": 48.0
+        }
+      }
+    },
+    "4class_scratch": {
+      "n_test": 48,
+      "correct": 27,
+      "accuracy": 0.5625,
+      "macro_f1": 0.5380081300813008,
+      "confusion_matrix": [
+        [
+          4,
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          3,
+          8,
+          1
+        ],
+        [
+          0,
+          0,
+          12,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          8
+        ]
+      ],
+      "class_metrics": {
+        "sports": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.5,
+          "support": 12.0
+        },
+        "finance": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1-score": 0.4,
+          "support": 12.0
+        },
+        "education": {
+          "precision": 0.41379310344827586,
+          "recall": 1.0,
+          "f1-score": 0.5853658536585366,
+          "support": 12.0
+        },
+        "culture": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 12.0
+        },
+        "accuracy": 0.5625,
+        "macro avg": {
+          "precision": 0.7701149425287356,
+          "recall": 0.5625,
+          "f1-score": 0.5380081300813008,
+          "support": 48.0
+        },
+        "weighted avg": {
+          "precision": 0.7701149425287356,
+          "recall": 0.5625,
+          "f1-score": 0.5380081300813008,
+          "support": 48.0
+        }
+      }
+    },
+    "8class_pretrained": {
+      "n_test": 96,
+      "correct": 81,
+      "accuracy": 0.84375,
+      "macro_f1": 0.8421967525228395,
+      "confusion_matrix": [
+        [
+          11,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          10,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          10,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          11,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          8,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          8,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          11
+        ]
+      ],
+      "class_metrics": {
+        "sports": {
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.9565217391304348,
+          "support": 12.0
+        },
+        "finance": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 12.0
+        },
+        "education": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 12.0
+        },
+        "culture": {
+          "precision": 0.7857142857142857,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.8461538461538461,
+          "support": 12.0
+        },
+        "technology": {
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7272727272727273,
+          "support": 12.0
+        },
+        "health": {
+          "precision": 0.8888888888888888,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7619047619047619,
+          "support": 12.0
+        },
+        "agriculture": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1-score": 0.8571428571428571,
+          "support": 12.0
+        },
+        "law": {
+          "precision": 0.7857142857142857,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.8461538461538461,
+          "support": 12.0
+        },
+        "accuracy": 0.84375,
+        "macro avg": {
+          "precision": 0.8554563492063492,
+          "recall": 0.84375,
+          "f1-score": 0.8421967525228395,
+          "support": 96.0
+        },
+        "weighted avg": {
+          "precision": 0.8554563492063493,
+          "recall": 0.84375,
+          "f1-score": 0.8421967525228394,
+          "support": 96.0
+        }
+      }
+    },
+    "8class_scratch": {
+      "n_test": 96,
+      "correct": 33,
+      "accuracy": 0.34375,
+      "macro_f1": 0.30101652533159384,
+      "confusion_matrix": [
+        [
+          6,
+          0,
+          3,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          7,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          11,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          1,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          9,
+          1,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      ],
+      "class_metrics": {
+        "sports": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 12.0
+        },
+        "finance": {
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.2857142857142857,
+          "support": 12.0
+        },
+        "education": {
+          "precision": 0.19672131147540983,
+          "recall": 1.0,
+          "f1-score": 0.3287671232876712,
+          "support": 12.0
+        },
+        "culture": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 12.0
+        },
+        "technology": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 12.0
+        },
+        "health": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 12.0
+        },
+        "agriculture": {
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.5714285714285714,
+          "support": 12.0
+        },
+        "law": {
+          "precision": 0.8333333333333334,
+          "recall": 0.4166666666666667,
+          "f1-score": 0.5555555555555556,
+          "support": 12.0
+        },
+        "accuracy": 0.34375,
+        "macro avg": {
+          "precision": 0.44125683060109294,
+          "recall": 0.34375,
+          "f1-score": 0.30101652533159384,
+          "support": 96.0
+        },
+        "weighted avg": {
+          "precision": 0.4412568306010929,
+          "recall": 0.34375,
+          "f1-score": 0.3010165253315938,
+          "support": 96.0
+        }
+      }
+    }
+  }
+}

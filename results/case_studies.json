@@ -1,0 +1,35 @@
+[
+  {
+    "topics": "8",
+    "variant": "pretrained",
+    "id": "19980507-08-006",
+    "title": "澳大利亚一游泳选手被禁赛",
+    "true_label": "sports",
+    "predicted_label": "law",
+    "confidence": "0.6196286082267761",
+    "correct": "False",
+    "analysis": "报道主体是游泳选手禁赛，但正文出现体育仲裁法庭、违反政策和处罚等表达。模型预测法治，可能受到这些司法与处罚词汇影响；这属于体育事件与规则执行的交叉。"
+  },
+  {
+    "topics": "8",
+    "variant": "pretrained",
+    "id": "19980421-07-005",
+    "title": "宝洁资助中美卫生研究合作项目",
+    "true_label": "health",
+    "predicted_label": "education",
+    "confidence": "0.5175176858901978",
+    "correct": "False",
+    "analysis": "报道主题是公共卫生研究资助，正文同时涉及公共卫生学院、耶鲁大学、课程教学和学生实习。医疗与教育词汇重叠，可以解释这一预测的合理性，但不能单凭词频确定模型的因果依据。"
+  },
+  {
+    "topics": "8",
+    "variant": "pretrained",
+    "id": "19980407-01-003",
+    "title": "电脑为上海人『送来』新鲜菜",
+    "true_label": "technology",
+    "predicted_label": "agriculture",
+    "confidence": "0.49039244651794434",
+    "correct": "False",
+    "analysis": "标题以电脑技术命中科技规则，正文介绍传感器调节温湿度，以及蔬菜种植和亩产。模型预测农业，表明按技术手段与按应用领域标注会得到不同答案，也暴露了单标签规则的边界。"
+  }
+]

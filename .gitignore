@@ -1,0 +1,9 @@
+models/
+raw/
+.venv/
+.mplcache/
+__pycache__/
+*.py[cod]
+*.cache
+.DS_Store
+.env
